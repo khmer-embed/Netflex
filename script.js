@@ -1,6 +1,5 @@
 const playerInstance = jwplayer("player").setup({
   controls: true,
-  sharing: true,
   displaytitle: true,
   displaydescription: true,
   abouttext: "JWplayer",
@@ -79,7 +78,7 @@ const playerInstance = jwplayer("player").setup({
 playerInstance.on("ready", function () {
   const buttonId = "download-video-button";
   const iconPath =
-    "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDB6Ii8+PHBhdGggZD0iTTMgMTloMTh2Mkgzdi0yem0xMC01LjgyOEwxOS4wNzEgNy4xbDEuNDE0IDEuNDE0TDEyIDE3IDMuNTE1IDguNTE1IDQuOTI5IDcuMSAxMSAxMy4xN1YyaDJ2MTEuMTcyeiIgZmlsbD0icmdiYSgyNDcsMjQ3LDI0NywxKSIvPjwvc3ZnPg==";
+    "";
   const tooltipText = "Download Video";
 
   // Call the player's `addButton` API method to add the custom button
@@ -88,12 +87,7 @@ playerInstance.on("ready", function () {
   // This function is executed when the button is clicked
   function buttonClickAction() {
     const playlistItem = playerInstance.getPlaylistItem();
-    const anchor = document.createElement("a");
     const fileUrl = playlistItem.file;
-    anchor.setAttribute("href", fileUrl);
-    const downloadName = playlistItem.file.split("/").pop();
-    anchor.setAttribute("download", downloadName);
-    anchor.style.display = "none";
     document.body.appendChild(anchor);
     anchor.click();
     document.body.removeChild(anchor);
