@@ -3,8 +3,8 @@ const playerInstance = jwplayer("player").setup({
   sharing: true,
   displaytitle: true,
   displaydescription: true,
-  abouttext: "",
-  aboutlink: "",
+  abouttext: "JWplayer",
+  aboutlink: "https://khmoviehd.com/",
 
   skin: {
     name: "netflix"
@@ -12,8 +12,8 @@ const playerInstance = jwplayer("player").setup({
 
   logo: {
     file:
-      "",
-    link: ""
+      "https://khmoviehd.com/wp-content/uploads/2024/01/Khmer-Vovie-HD-300-x-80px.png",
+    link: "https://khmoviehd.com/"
   },
 
   captions: {
@@ -25,7 +25,7 @@ const playerInstance = jwplayer("player").setup({
 
   playlist: [
     {
-      title: "Sprite Fright - Open Movie ",
+      title: "Sprite Fright - Open Movie by Blender Studio",
       description: "You're Watching",
       image: "https://i.ytimg.com/vi/_cMxraX_5RE/maxresdefault.jpg",
       sources: [
@@ -45,14 +45,15 @@ const playerInstance = jwplayer("player").setup({
         {
           file:
             "https://raw.githubusercontent.com/iPingOi/jwplayer/main/%5BBengali%5D%20Sprite%20Fright%20-%20Blender%20Open%20Movie.srt",
-          label: "Bangla",
+          label: "Khmer",
           kind: "captions"
         },
         {
           file:
-            "https://raw.githubusercontent.com/iPingOi/jwplayer/main/%5BSpanish%5D%20Sprite%20Fright%20-%20Blender%20Open%20Movie.srt",
-          label: "Spanish",
-          kind: "captions"
+            "https://raw.githubusercontent.com/iPingOi/jwplayer/main/%5BEnglish%5D%20Sprite%20Fright%20-%20Blender%20Open%20Movie.srt",
+          label: "English",
+          kind: "captions",
+          default: true
         }
       ],
       tracks: [
@@ -63,6 +64,16 @@ const playerInstance = jwplayer("player").setup({
       ]
     }
   ],
+  advertising: {
+    client: "vast",
+    schedule: [
+      {
+        offset: "pre",
+        tag:
+          ""
+      }
+    ]
+  }
 });
 
 playerInstance.on("ready", function () {
