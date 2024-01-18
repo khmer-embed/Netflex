@@ -3,8 +3,8 @@ const playerInstance = jwplayer("player").setup({
   sharing: true,
   displaytitle: true,
   displaydescription: true,
-  abouttext: "Buy Me a Coffee",
-  aboutlink: "https://www.buymeacoffee.com/pingo",
+  abouttext: "",
+  aboutlink: "",
 
   skin: {
     name: "netflix"
@@ -12,8 +12,8 @@ const playerInstance = jwplayer("player").setup({
 
   logo: {
     file:
-      "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
-    link: "https://www.buymeacoffee.com/pingo"
+      "",
+    link: ""
   },
 
   captions: {
@@ -25,40 +25,20 @@ const playerInstance = jwplayer("player").setup({
 
   playlist: [
     {
-      title: "Sprite Fright - Open Movie by Blender Studio",
+      title: "Sprite Fright - Open Movie ",
       description: "You're Watching",
       image: "https://i.ytimg.com/vi/_cMxraX_5RE/maxresdefault.jpg",
       sources: [
         {
           file:
-            "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/74/Sprite_Fright_-_Open_Movie_by_Blender_Studio.webm/Sprite_Fright_-_Open_Movie_by_Blender_Studio.webm.1080p.vp9.webm",
+            "https://raw.githubusercontent.com/khmer-embed/FightsBreakSphereSeason2Episode4/master/FightsBreakSphereSeason2Episode4.m3u8",
           label: "1080p",
           default: true
         },
         {
           file:
-            "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/74/Sprite_Fright_-_Open_Movie_by_Blender_Studio.webm/Sprite_Fright_-_Open_Movie_by_Blender_Studio.webm.720p.vp9.webm",
+            "https://raw.githubusercontent.com/khmer-embed/FightsBreakSphereSeason2Episode4/master/FightsBreakSphereSeason2Episode4.m3u8",
           label: "720p"
-        },
-        {
-          file:
-            "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/74/Sprite_Fright_-_Open_Movie_by_Blender_Studio.webm/Sprite_Fright_-_Open_Movie_by_Blender_Studio.webm.480p.vp9.webm",
-          label: "480p"
-        },
-        {
-          file:
-            "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/74/Sprite_Fright_-_Open_Movie_by_Blender_Studio.webm/Sprite_Fright_-_Open_Movie_by_Blender_Studio.webm.360p.vp9.webm",
-          label: "360p"
-        },
-        {
-          file:
-            "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/74/Sprite_Fright_-_Open_Movie_by_Blender_Studio.webm/Sprite_Fright_-_Open_Movie_by_Blender_Studio.webm.240p.vp9.webm",
-          label: "240p"
-        },
-        {
-          file:
-            "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/74/Sprite_Fright_-_Open_Movie_by_Blender_Studio.webm/Sprite_Fright_-_Open_Movie_by_Blender_Studio.webm.160p.webm",
-          label: "160p"
         }
       ],
       captions: [
@@ -66,49 +46,6 @@ const playerInstance = jwplayer("player").setup({
           file:
             "https://raw.githubusercontent.com/iPingOi/jwplayer/main/%5BBengali%5D%20Sprite%20Fright%20-%20Blender%20Open%20Movie.srt",
           label: "Bangla",
-          kind: "captions"
-        },
-        {
-          file:
-            "https://raw.githubusercontent.com/iPingOi/jwplayer/main/%5BEnglish%5D%20Sprite%20Fright%20-%20Blender%20Open%20Movie.srt",
-          label: "English",
-          kind: "captions",
-          default: true
-        },
-        {
-          file:
-            "https://raw.githubusercontent.com/iPingOi/jwplayer/main/%5BGerman%5D%20Sprite%20Fright%20-%20Blender%20Open%20Movie.srt",
-          label: "German",
-          kind: "captions"
-        },
-        {
-          file:
-            "https://raw.githubusercontent.com/iPingOi/jwplayer/main/%5BHungarian%5D%20Sprite%20Fright%20-%20Blender%20Open%20Movie.srt",
-          label: "Hungarian",
-          kind: "captions"
-        },
-        {
-          file:
-            "https://raw.githubusercontent.com/iPingOi/jwplayer/main/%5BItalian%5D%20Sprite%20Fright%20-%20Blender%20Open%20Movie.srt",
-          label: "Italian",
-          kind: "captions"
-        },
-        {
-          file:
-            "https://raw.githubusercontent.com/iPingOi/jwplayer/main/%5BMalayalam%5D%20Sprite%20Fright%20-%20Blender%20Open%20Movie.srt",
-          label: "Malayalam",
-          kind: "captions"
-        },
-        {
-          file:
-            "https://raw.githubusercontent.com/iPingOi/jwplayer/main/%5BPortugu%C3%AAs%20(Portugal)%5D%20Sprite%20Fright%20-%20Blender%20Open%20Movie.srt",
-          label: "Portuguese",
-          kind: "captions"
-        },
-        {
-          file:
-            "https://raw.githubusercontent.com/iPingOi/jwplayer/main/%5BRussian%5D%20Sprite%20Fright%20-%20Blender%20Open%20Movie.srt",
-          label: "Russian",
           kind: "captions"
         },
         {
@@ -126,16 +63,6 @@ const playerInstance = jwplayer("player").setup({
       ]
     }
   ],
-  advertising: {
-    client: "vast",
-    schedule: [
-      {
-        offset: "pre",
-        tag:
-          "https://www.videosprofitnetwork.com/watch.xml?key=d904b92c1f6cc769c59d030320a66f69"
-      }
-    ]
-  }
 });
 
 playerInstance.on("ready", function () {
